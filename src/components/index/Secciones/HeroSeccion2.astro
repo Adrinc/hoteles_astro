@@ -1,0 +1,154 @@
+---
+import Moden from '../../Scene3D/ModenScene/Main3D';
+import BotonFlecha from '../../global/BotonFlecha.astro';
+import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
+
+---
+<section id="#bestinternet">
+
+	
+	<main class="flex flex-row gap-4 box-border">
+		<div class="columna-izquierda" >
+
+			<div>
+				<div class="gradient-text">The best tools for</div>
+				<div class="subtitle">your Analytics.</div>
+				<p class="description">Nulla elementum ultricies est, vel consequat neque condimentum vel. Curabitur sodales ex ante, at viverra mauris euismod semper. Etiam laoreet mauris libero, at aliquam lectus sagittis.</p>
+			</div>
+			<div class="flex flex-row content-start max-md:justify-center">
+				<BuyOrApplyFree boton1StrokeColor='#1B69DF' boton1TextColor='#1B69DF' icon1Color='#1B69DF'  midleText_tailwind_color='primaryTextColor'/>
+			</div>
+			
+		</div>
+
+		<div class="flex flex-col justify-center items-center">
+			
+			
+
+	
+			<img class="tools" loading="lazy" src="/image/hotel/bestTools.png"/>
+
+
+		</div>
+	</main>
+</section>
+		  
+	<style>
+
+		section{
+		
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			box-sizing: border-box;
+			padding-left: clamp(0px, 5vw, 100px);
+			padding-right: clamp(0px, 5vw, 100px);
+			margin-top: 80px;
+			padding-bottom: 80px;
+			
+			height: 100%;
+			
+		}
+		.columna-izquierda{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			max-width: 50vw;
+			gap: 2rem;
+			box-sizing: border-box;
+		
+		}
+
+			.title, .best, .subtitle{
+			color: var(--primary-text-color);
+			font-size: clamp(40px, 5vw, 100px);
+			font-weight: 400;
+			letter-spacing: 2px;
+			text-align: left;
+			word-spacing: 5px;
+			text-wrap: balance;
+
+			}
+			.gradient-text{
+			font-size: clamp(40px, 5vw, 100px);
+			font-weight: 800;
+			letter-spacing: 2px;
+			text-align: left;
+			word-spacing: 5px;
+			text-wrap: balance;
+			
+
+			background: var(--primary-gradient);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			}
+	
+			.subtitle{
+			
+				font-weight: 300;
+				line-height: 160%;
+				margin-top: 50px;
+				font-weight: 700;
+			}
+		
+		  
+		
+			.icono {
+			display: inline-block;
+			aspect-ratio: 1.1;
+			}
+			
+			
+
+			.tools{
+			width: clamp(280px, 50vw, 600px);
+			height: clamp(280px, 50vw, 600px);
+		
+			}
+			
+			.description {
+			  color: var(--primary-text-color);
+			  font-weight: 300;
+			  text-wrap: pretty;
+			  font-size: clamp(1rem, 3vw, 2rem);
+			}
+
+			.cta-text {
+			  justify-content: center;
+			  color: var(--primary-text-color);
+			  text-align: center;
+			  align-self: center;
+			  font-size: clamp(14px, 1.5vw, 1.5rem);
+			  font-weight: 200;
+			}
+	
+			@media (max-width: 768px) {
+				main {
+				flex-direction: column;
+				align-items: center;
+				}
+				.columna-izquierda{
+					max-width: 100%;
+					text-align: center;
+				}
+				.tools{
+				width: clamp(280px, 50vw, 500px);
+				height: clamp(280px, 50vw, 500px);
+				}
+				.title, .best, .subtitle, .gradient-text{
+				text-align: center;
+				}
+	
+			}
+			@media  screen and (height< 450px) {
+				section{
+		
+					padding-top: clamp(200px, 50vh, 400px);
+					margin-bottom: clamp(200px, 50vh, 300px);
+				}
+		
+			}
+			
+	
+ </style>

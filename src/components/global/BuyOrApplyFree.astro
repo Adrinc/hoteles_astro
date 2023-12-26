@@ -1,0 +1,45 @@
+---
+import BotonFlecha from "./BotonFlecha.astro";
+
+interface Props {
+    direction?:string;
+    midleText?:string;
+    midleText_tailwind_color?:string;
+    boton1TextColor?:string;
+    boton1Color?:string;
+    boton1StrokeColor?:string;
+    icon1Color?:string;
+    boton2TextColor?:string;
+    boton2Color?:string;
+    boton2StrokeColor?:string;
+    icon2Color?:string;
+
+}
+const{direction="row", midleText=" OR ",  midleText_tailwind_color="tertiaryTextColor", boton1TextColor="tertiaryTextColor", boton1Color="transparent", boton1StrokeColor="primaryColor", icon1Color, boton2TextColor="tertiaryTextColor", boton2Color="primaryColor", boton2StrokeColor="primaryColor", icon2Color  }= Astro.props;
+---
+
+<div class="botones" style={`--direction: ${direction};`}>
+    <BotonFlecha texto="SEE PRICES" link="/acp" iconColor={icon1Color}  link="https://cb-luna.github.io/uwifi_map_services-build/#/" textColor={boton1TextColor} borderColor={boton1StrokeColor}/>
+    <p class=`texto-or font-bold text-${ midleText_tailwind_color}`> {midleText} </p>
+    <BotonFlecha backgroundColor="var(--primary-buttom-color)" iconColor={icon2Color} texto="LOGIN TO YOUR ACCT" link="https://cb-luna.github.io/uwifi_map_services_acp_build/" textColor={boton2TextColor} borderColor={boton2StrokeColor}/>
+</div>
+
+
+<style>
+    .botones{
+        display: flex;
+        flex-direction: var(--direction);
+        justify-content: center;
+        align-items: center;
+        gap: clamp(10px, 20vw, 20px);
+       
+    }
+    .texto-or{
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+    @media (max-width: 768px){
+        .botones{
+            flex-direction: column;
+        }
+    }
+</style>

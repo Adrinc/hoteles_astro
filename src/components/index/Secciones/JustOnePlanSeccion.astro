@@ -1,0 +1,153 @@
+---
+import TarjetaPaqueteEspecial from '../../TarjetaPaqueteEspecial.astro';
+import PriceAndPlansInfo from '../PriceAndPlansInfo.astro';
+
+let listas = [
+  { icono: 'image/checkwhite.svg', texto: '5G Wi-Fi Gateway device included' },
+  { icono: 'image/checkwhite.svg', texto: 'FREE 2 Day Shipping' },
+  { icono: 'image/checkwhite.svg', texto: 'Plug and Play Self Insall' },
+  { icono: 'image/checkwhite.svg', texto: 'Redundancy Included' },
+  { icono: 'image/checkwhite.svg', texto: 'Portable' },
+];
+---
+
+
+<section id="plan">
+  <div class="main-container">
+    
+    
+    <div class="columna-izquierda">
+      <div class="title">
+        Perfect benefits. <span class="text-primaryColor">Small prices. </span> 
+        </div>
+
+
+   <div class="title" id="oneplan">
+     JUST <span class="text-primaryColor">ONE</span> PLAN?
+   </div>
+   <div class="description">
+     <p>Yes, we make it  <span class="text-quaternaryTextColor font-bold">simple.</span> </p>
+   </div>
+ 
+   <p class="description">Discover perfection in simplicity. Our single subscription has it all, without the hassle</p>
+
+</div>
+
+<div class="columna-derecha">
+
+    <TarjetaPaqueteEspecial title="THE ONE" precio="299" modelo="Value" description="2 Months FREE TRIAL" lista={listas}/>
+</div>
+
+</div>
+</section>
+
+
+<style>
+
+  section {
+  display: flex;
+  flex-direction: column;
+	justify-content: space-between;
+  align-items: center;
+  }
+  .main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: clamp(0px, 10vw, 100px);
+    padding-left: clamp(0px, 10vw, 100px);
+    padding-right: clamp(0px, 10vw, 100px);
+    gap: 1rem;
+  }
+  
+  .columna-izquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    width: 100%;
+    height: 80vh;
+
+  }
+  
+  .columna-derecha{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: center;
+    width: 50%;
+  }
+
+
+  .description 
+  {
+    color: var(--primary-text-color);
+		font-size: clamp(1.5rem, 3vw, 50px);
+    font-weight: 100;
+    text-align: left;
+
+  }
+  .description-inferior 
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--primary-text-color);
+		font-size: clamp(1.5rem, 4vw, 30px);
+    font-weight: 100;
+    text-align: left;
+    gap: 8px;
+
+  }
+
+
+	.title{
+    
+      color: var(--primary-text-color);
+			font-size: clamp(1.5rem, 5vw, 70px);
+			font-weight: bold;
+			}
+	.title, #oneplan{
+    
+      color: var(--primary-text-color);
+			font-size: clamp(1.5rem, 5vw, 65px);
+			font-weight: 700;
+			}
+      .image {
+			display: inline-block;
+			width: clamp(30px, 5vw, 60px); 
+			height: clamp(30px, 5vw, 60px);
+      align-self: center;
+      margin-bottom: 25px;
+			}
+
+
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+	.title{
+    
+    color: var(--primary-text-color);
+    font-size: clamp(1.5rem, 3vw, 80px);
+    font-weight: bold;
+    text-align: center;
+    }
+    .description, .description-inferior 
+  {
+    text-align: center;
+    justify-content: center;
+  }
+  .image {
+
+      margin-bottom: 10px;
+			}
+
+  }
+</style>

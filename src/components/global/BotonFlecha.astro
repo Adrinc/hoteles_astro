@@ -1,0 +1,147 @@
+---
+interface Props {
+	texto: string;
+	link: string;
+	backgroundColor?: string;
+	borderColor?: string;
+	borderColorHover?:string;
+	borderWidth?: number;
+	textColor?: string;
+	textColorHover?: string;
+	iconColor?: string;
+	iconColorHover?: string;
+	gradientColorLeft?: string;
+	gradientColorCenter?: string;
+	gradientColorRight?: string;
+}
+
+const { texto, link, backgroundColor="transparent", iconColor='secondaryColor', iconColorHover='primaryColor', borderColor = 'primaryColor', borderColorHover ='transparent',  borderWidth=3, textColor='tertiaryTextColor', textColorHover='#ffffff', gradientColorLeft='#1B69DF',gradientColorCenter='#093373', gradientColorRight='#08306D'   } = Astro.props;
+---
+<a href={link}>
+    <button class=`button-learn flex flex-row-reverse align-middle items-center text-${textColor}`
+	data-text={texto}
+	style={
+	`
+	--background-color: ${backgroundColor};
+	--text-color: ${textColor};
+	--text-color-hover: ${textColorHover};
+	--icon-color-hover: ${iconColorHover};
+	--border-color: ${borderColor};
+	--border-color-hover: ${borderColorHover};
+	--border-width: ${borderWidth}px;
+	--gradient-left: ${gradientColorLeft}; 
+	--gradient-center: ${gradientColorCenter}; 
+	--gradient-right: ${gradientColorRight};
+	`
+	}>
+	
+
+	
+
+	<svg class=	`icono stroke-${iconColor} inline-block` width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<g id="chevron-right 1">
+		<path id="Vector" d="M11.6987 23.5705L19.4126 15.8566L11.6987 8.1427" stroke={iconColor} stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+		</g>
+	</svg>
+		
+</button>
+</a>
+
+
+<style>
+
+.icono{
+	
+	transition: stroke 1s ease-in-out;
+}
+.icono:hover{
+	stroke: var(--icon-color-hover);
+	transition: stroke 1s ease-in-out;
+}
+  
+.button-learn {
+position: relative;
+background: var(--background-color);
+font-size: clamp(10px, 20vw, 24px);
+font-weight: 200;
+border-radius: 50px;
+border: var(--border-width) solid;
+border-color: var(--border-color);
+padding: 12px;
+padding-left: 20px;
+padding-right: 10px;
+transition: all 0.5s ease;
+}
+.button-learn svg {
+  position: relative;
+  z-index: 3;
+}
+
+.button-learn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--gradient-left), var(--gradient-center), var(--gradient-right));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 50px;
+  z-index: 0;
+}
+
+
+.button-learn::after {
+  content: attr(data-text);
+  position: relative;
+  z-index: 2;
+  color: var(--text-color);
+}
+.button-learn:hover {
+color: var(--text-color-hover);
+background-color: transparent;
+
+border-color: var(--border-color-hover);
+transition: all 0.5s ease;
+}
+.button-learn:hover::before {
+  opacity: 1;
+}
+.button-learn:hover::after {
+  color: var(--text-color-hover);
+}
+
+.image {
+width: clamp(0.5rem, 1vw, 85px);
+height: clamp(0.5rem, 1vw, 85px);
+}
+@media (max-width: 768px) {
+	.button-learn {
+		font-size: clamp(12px, 20vw, 20px)
+	}
+		
+	}
+@media (max-width: 450px) {
+	.button-learn {
+		font-size: clamp(8px, 10vw, 16px);
+	
+	}
+	.icono{
+	display:none;
+}
+		
+	}
+@media  screen and (height< 391px) {
+	.button-learn {
+		font-size: clamp(8px, 10vh, 16px);
+		padding: 8px;
+		align-self: center;
+		font-weight: 600;
+		color: aqua;
+	}
+	.icono{
+	display:none;
+}
+	}
+</style>

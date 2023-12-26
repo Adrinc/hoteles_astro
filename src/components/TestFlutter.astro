@@ -1,0 +1,42 @@
+---
+import Moden from './Scene3D/ModenScene/Main3D';
+import BotonFlecha from './global/BotonFlecha.astro';
+import Row from '../layouts/global/Row.astro';
+import Column from '../layouts/global/Column.astro';
+import Container from '../layouts/global/Container.astro';
+import Padding from '../layouts/global/Padding.astro';
+import Text from '../layouts/global/Text.astro';
+import Expanded from '../layouts/global/Expanded.astro';
+
+---
+<section>
+
+	
+
+    <Padding all={5}>
+	<Row mainAxisAlignment='space-evenly' color='#0000ff' padding={20} >
+       
+            <Column padding={8} mainAxisAlignment='space-between' crossAxisAligment='center'  key="maincolumn" color='#aaa0ff' >
+                <Container width={300} height={300} padding={8} borderRadius={10} border={5} borderColor='#ffffff' color='#f0f0f0'>
+                    <Column key="idrs" mainAxisAlignment='space-between'>
+                    
+                        <p>
+                            
+                        </p>
+                    </Column>
+                </Container>  
+            </Column>
+            <Column mainAxisAlignment='space-between' crossAxisAligment='center'  key="maincolumn" color='#a0ff' >
+                <Container width={300} height={300} padding={8} borderRadius={10} border={5} borderColor='#ffffff'/>  
+            </Column>
+            <Column mainAxisAlignment='space-between' crossAxisAligment='center'  key="maincolumn" color='#aff' >
+                <Container width={300} height={300} padding={8} borderRadius={10} border={5} borderColor='#ffffff'/>  
+            </Column>
+        
+    
+    </Row>
+</Padding>
+
+	
+</section>
+		  
