@@ -8,9 +8,9 @@ const TopMenu = () => {
         { name: 'HOME', url: '/', alterurl:"/#home" },
         { name: 'PLAN', url: '/#plan', alterurl:"/#plan" },
         { name: 'PLATFORM', url: '/#platform', alterurl:"/platform" },
-        { name: 'HOW IT WORKS', url: '/howitworks', alterurl:"/howitworks" },
+        { name: 'CloudInn', url: '/cloudInn', alterurl:"/cloudInn" },
 /*         { name: 'APP', url: '/#app', alterurl:"/#app" }, */
-        { name: 'FAQ', url: '/#faq', alterurl:"/#faq" },
+       /*  { name: 'FAQ', url: '/#faq', alterurl:"/#faq" }, */
 /*         { name: '5G', url: '/#5g', alterurl:"/#5g" }, */
     ];
     const location = useLocation();
@@ -132,13 +132,13 @@ const TopMenu = () => {
                 )}
 
             <div className={TopMenuStyle.mainContainer}>
-              <div class="flex flex-row justify-center align-middle items-center">
+              <div className="flex flex-row justify-center align-middle items-center">
                 <img
                     loading="lazy"
                     src="favicon.svg"
                     className={TopMenuStyle.image}
                 />
-                <h1 class="text-quaternaryTextColor font-bold  text-3xl pt-3">RevPARUP</h1>
+                <h1 className="text-quaternaryTextColor font-bold  text-3xl pt-3">RevPARUP</h1>
               </div>
 
                 {isMobile && (
