@@ -1,0 +1,157 @@
+---
+import BotonFlecha from "../../global/BotonFlecha.astro";
+import BannerMarcas from "../components/BannerMarcas.astro";
+
+
+---
+<section id="aboutplatform">
+	<BannerMarcas />
+
+
+	<div class="main-container">
+
+        <div class="columna-izquierda">
+			
+			<img src="/image/hotel/thecicle.svg" alt="cicle">
+            
+		</div>
+
+		<div class="columna-derecha" >
+
+		
+			<div class="title">Platform that gives you the tools to optimize resources</div>
+		
+				<p class="description">
+					Regardless of the type of property you manage, a property business
+					Successful hosting requires the right tools to
+					compete effectively online, optimize operating costs
+					and meet the high expectations of connected guests
+					digitally.
+				</p>
+				<BotonFlecha texto="Request demo" link="https://cb-luna.github.io/uwifi_map_services_acp_build/" backgroundColor="#24A342" textColor="#ffff" borderColor="#24A342" iconColor="#ffff" />
+
+		</div>
+	
+
+		
+	
+
+		
+	</main>
+</section>
+		  
+	<style>
+
+
+		section{
+			display: flex;
+			flex-direction: column;
+			block-size: auto;
+			background: var(--quaternary-gradient);
+		}
+
+		.main-container{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+			padding: clamp(20px, 50vw, 100px);
+	}
+
+    .columna-izquierda{
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+            gap: 2rem;
+			width: 35%;
+	
+		}
+		.columna-derecha{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: 2rem;
+            width: 65%;
+			height: 100%;
+			
+		}
+	
+		
+
+			.title{
+			color: var(--primary-text-color);
+			font-size: clamp(30px, 5vw, 40px);
+			font-weight: 700;
+			display: block;
+			text-wrap: pretty;
+			text-align: left;
+
+			}
+	
+			.subtitle{
+			color: var(--primary-text-color);
+			font-size: clamp(20px, 5vw, 30px);
+			font-weight: 400;
+			letter-spacing: 2px;
+			line-height: normal;
+			text-align: left;
+			word-spacing: 5px;
+			text-wrap: pretty;
+			font-weight: 300;
+			margin-top: 1rem;
+			display: block;
+			}
+		
+		  
+		
+
+			.description {
+			  color: var(--primary-text-color);
+			  font-weight: 300;
+			  text-wrap: pretty;
+			  font-size: clamp(1rem, 1.3vw, 1.5rem);
+			  display: block;
+			}
+			img{
+				width: clamp(280px, 50vw, 600px);
+				height: clamp(280px, 50vw, 600px);
+			}
+
+		
+	
+			@media (max-width: 900px) {
+				.main-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				align-content: center;
+				gap: 4rem;
+				}
+				section{
+				padding-left: clamp(20px, 5vw, 50px);
+				padding-right: clamp(20px, 5vw, 50px);
+				
+				}
+                .columna-izquierda{
+                    width: 100%;
+                    height: 70vh;
+                }
+                .columna-derecha{
+                    width: 100%;
+                }
+                .acp-video{
+                    width: 100%;
+                    height: 50vh;
+                }
+				.title, .best, .subtitle{
+				text-align: center;
+			
+				}
+			
+			}
+			
+	
+ </style>
