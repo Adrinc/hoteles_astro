@@ -9,6 +9,7 @@ export default {
 		  colors: {
 			primaryColor: 'var(--primary-color)',
 			secondaryColor: 'var(--secondary-color)',
+			tertiaryColor: 'var(--tertiary-color)',
 			primaryTextColor: 'var(--primary-text-color)',
 			secondaryTextColor: 'var(--secondary-text-color)',
 			tertiaryTextColor: 'var(--tertiary-text-color)',

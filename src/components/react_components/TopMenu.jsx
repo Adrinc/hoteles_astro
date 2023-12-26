@@ -6,8 +6,8 @@ import { useLocation } from 'react-router-dom';
 const TopMenu = () => {
     const links = [
         { name: 'HOME', url: '/', alterurl:"/#home" },
-        { name: 'ACP', url: '/#acp', alterurl:"/acp" },
         { name: 'PLAN', url: '/#plan', alterurl:"/#plan" },
+        { name: 'PLATFORM', url: '/#platform', alterurl:"/platform" },
         { name: 'HOW IT WORKS', url: '/howitworks', alterurl:"/howitworks" },
 /*         { name: 'APP', url: '/#app', alterurl:"/#app" }, */
         { name: 'FAQ', url: '/#faq', alterurl:"/#faq" },
@@ -30,8 +30,8 @@ const TopMenu = () => {
     };
 
     const handleLinkClick = (name) => {
-        if(name.includes("acp")){
-            setSelectedLink("ACP");
+        if(name.includes("platform")){
+            setSelectedLink("PLATFORM");
         }
         else if(name.includes("howitworks")){
             setSelectedLink("HOW IT WORKS");
@@ -124,7 +124,7 @@ const TopMenu = () => {
                     ))}
                  
                     <div className="flex flex-row justify-center  items-center align-middle  w-[100%] mt-6 ">
-                      <a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-green-500  hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://uwifi-web.vercel.app/login">Login</a>
+                      <a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-primaryColor  hover:bg-tertiaryColor focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://uwifi-web.vercel.app/login">Login</a>
                       </div>
              
                     </nav>
@@ -132,11 +132,14 @@ const TopMenu = () => {
                 )}
 
             <div className={TopMenuStyle.mainContainer}>
+              <div class="flex flex-row justify-center align-middle items-center">
                 <img
                     loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b7f45c54-79dc-492c-a979-eb8b20a2cc5c?apiKey=99b0eaa04efc41a78ff2850239e1f525&width=100"
+                    src="favicon.svg"
                     className={TopMenuStyle.image}
                 />
+                <h1 class="text-quaternaryTextColor font-bold  text-3xl pt-3">RevPARUP</h1>
+              </div>
 
                 {isMobile && (
                         <button className="navbar-burger self-center md:hidden" onClick={toggleMenu}>
@@ -162,7 +165,7 @@ const TopMenu = () => {
                 </nav>
 
                 <div className="hidden md:block ">
-                    <div className="flex items-center justify-end"><a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-green-500  hover:bg-green-600 focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://uwifi-web.vercel.app/login">Login</a></div>
+                    <div className="flex items-center justify-end"><a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-primaryColor  hover:bg-tertiaryColor focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://uwifi-web.vercel.app/login">Login</a></div>
                 </div>
             </div>
         </>

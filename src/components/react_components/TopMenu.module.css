@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     padding: clamp(20px, 25vw, 10px);
-    border-bottom: #fff 2px solid;
+    border-bottom: var(--primary-color) 2px solid;
     backdrop-filter: blur(10px); 
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,8 @@
   .image {
 
     object-position: center;
-    width: clamp(100px, 10vw, 250px);
+    height: 50px;
+    width: clamp(100px, 10vw, 200px);
     align-self: center;
   }
   .imagemobile {
@@ -59,11 +60,11 @@
     width: 100%;
   }
   .selected-link-mobile {
-    color: #00c402 !important;
+    color: var(--primary-color) !important;
 
   }
   .selected-link {
-    color: #00c402 !important;
+    color: var(--primary-color) !important;
 
   }
 
