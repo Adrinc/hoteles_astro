@@ -93,7 +93,7 @@ const TopMenu = () => {
     return (
         <>
                     {showMenu && (
-                <div className="md:hidden flex flex-col gap-10 absolute top-0 left-0 w-[30vw] h-[100vh] shadow-lg z-50 bg-[#00000070] backdrop-filter backdrop-blur-lg border-x-2 border-tertiaryColor animate-fade-right animate-duration-500">
+                <div className="md:hidden flex flex-col gap-10 absolute top-0 left-0 w-[40vw] h-[100vh] shadow-lg z-50 bg-[#00000070] backdrop-filter backdrop-blur-lg border-x-2 border-tertiaryColor animate-fade-right animate-duration-500">
                     <div className='flex flex-row justify-end p-4 '>
               
                         <button onClick={toggleMenu} className=" border-2 rounded-lg text-primaryTextColor p-2  font-bold text-lg">
@@ -102,12 +102,13 @@ const TopMenu = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className='flex flex-row justify-center p-2'>
-                        <img
-                        loading="lazy"
-                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/b7f45c54-79dc-492c-a979-eb8b20a2cc5c?apiKey=99b0eaa04efc41a78ff2850239e1f525&width=100"
-                        className={TopMenuStyle.imagemobile}
-                        />
+                    <div className='flex flex-col align-middle items-center justify-center p-2'>
+                    <img
+                    loading="lazy"
+                    src="/image/hotel/logoblanco.svg"
+                    className={TopMenuStyle.image}
+                />
+                 <h1 className="text-tertiaryTextColor font-bold  text-sm pt-3">RevPARUP</h1>
 
                  
                     </div>
@@ -123,7 +124,7 @@ const TopMenu = () => {
                   </a>
                     ))}
                  
-                    <div className="flex flex-row justify-center  items-center align-middle  w-[100%] mt-6 ">
+                    <div className="flex flex-row justify-center  items-center align-middle  w-[100%] ">
                       <a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-primaryColor  hover:bg-tertiaryColor focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://uwifi-web.vercel.app/login">Login</a>
                       </div>
              
@@ -135,10 +136,10 @@ const TopMenu = () => {
               <div className="flex flex-row justify-center align-middle items-center">
                 <img
                     loading="lazy"
-                    src="favicon.svg"
+                    src="/image/hotel/logoblanco.svg"
                     className={TopMenuStyle.image}
                 />
-                <h1 className="text-quaternaryTextColor font-bold  text-3xl pt-3">RevPARUP</h1>
+                <h1 className="text-tertiaryTextColor font-bold  text-3xl pt-3">RevPARUP</h1>
               </div>
 
                 {isMobile && (
@@ -165,7 +166,7 @@ const TopMenu = () => {
                 </nav>
 
                 <div className="hidden md:block ">
-                    <div className="flex items-center justify-end"><a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-primaryColor  hover:bg-tertiaryColor focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://uwifi-web.vercel.app/login">Login</a></div>
+                    <div className="flex items-center justify-end"><a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-secondaryButtomTextColor border-solid border-2 border-tertiaryColor buttom-text-shadow drop-shadow-xl bg-secondaryColor transition-all rounded-[25px] hover:bg-tertiaryColor hover:rounded-[50px] hover:text-tertiaryTextColor" href="https://uwifi-web.vercel.app/login">Login</a></div>
                 </div>
             </div>
         </>
