@@ -19,7 +19,10 @@ import BotonFlecha from "../../global/BotonFlecha.astro";
 					revenue, operations and experiences
 					optimized guests.
 				</p>
-				<BotonFlecha texto="Request demo" link="https://cb-luna.github.io/uwifi_map_services_acp_build/" backgroundColor="#24A342" textColor="#ffff" borderColor="#24A342" iconColor="#ffff" />
+				<div class="boton">
+
+					<BotonFlecha texto="Request demo" link="https://cb-luna.github.io/uwifi_map_services_acp_build/" backgroundColor="#24A342" textColor="#ffff" borderColor="#24A342" iconColor="#ffff" />
+				</div>
 			</div>
 	
 
@@ -142,7 +145,11 @@ import BotonFlecha from "../../global/BotonFlecha.astro";
 
 		
 	
-			@media (max-width: 768px) {
+			@media (max-width: 900px) {
+				section{
+				padding-left: clamp(20px, 10vw, 50px);
+				padding-right: clamp(20px, 10vw, 50px);
+				}
 				.main-container {
 				display: flex;
 				flex-direction: column;
@@ -150,11 +157,7 @@ import BotonFlecha from "../../global/BotonFlecha.astro";
 				align-content: center;
 				gap: 1rem;
 				}
-				section{
-					padding-left: clamp(20px, 5vw, 50px);
-				padding-right: clamp(20px, 5vw, 50px);
 				
-				}
 				.columna-izquierda-texto-seccion{
 				display: flex;
 				flex-direction: column;
@@ -162,9 +165,15 @@ import BotonFlecha from "../../global/BotonFlecha.astro";
 				gap: 2rem;
 				width: 100%;
 				}
-				.title, .best, .subtitle{
+				h1, .title, .best, .subtitle, .description{
 				text-align: center;
 			
+				}
+				.boton{ 
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
 				}
 			
 			}
