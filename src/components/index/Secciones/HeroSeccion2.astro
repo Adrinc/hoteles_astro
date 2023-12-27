@@ -10,10 +10,10 @@ import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
 		<div class="columna-izquierda" >
 
 			<div>
-				<div class="gradient-text">The best tools for</div>
-				<div class="subtitle">your Analytics.</div>
-				<p class="description">Nulla elementum ultricies est, vel consequat neque condimentum vel. Curabitur sodales ex ante, at viverra mauris euismod semper. Etiam laoreet mauris libero, at aliquam lectus sagittis.</p>
+				<h1 class="gradient-text">The best tools for</h1>
+				<h2 class="subtitle">your Analytics.</h2>
 			</div>
+			<p class="description">Nulla elementum ultricies est, vel consequat neque condimentum vel. Curabitur sodales ex ante, at viverra mauris euismod semper. Etiam laoreet mauris libero, at aliquam lectus sagittis.</p>
 			<div class="flex flex-row content-start max-md:justify-center">
 				<BuyOrApplyFree boton1StrokeColor='#1B69DF' boton1TextColor='#1B69DF' icon1Color='#1B69DF'  midleText_tailwind_color='primaryTextColor'/>
 			</div>
@@ -39,7 +39,7 @@ import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			box-sizing: border-box;
+		
 			padding-left: clamp(0px, 5vw, 100px);
 			padding-right: clamp(0px, 5vw, 100px);
 			margin-top: 80px;
@@ -51,30 +51,25 @@ import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
 		.columna-izquierda{
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: space-around;
 			max-width: 50vw;
-			gap: 2rem;
-			box-sizing: border-box;
+			gap: 20px;
 		
 		}
 
-			.title, .best, .subtitle{
+			.title,  .subtitle{
 			color: var(--primary-text-color);
 			font-size: clamp(40px, 5vw, 100px);
 			font-weight: 400;
-			letter-spacing: 2px;
 			text-align: left;
-			word-spacing: 5px;
-			text-wrap: balance;
+			
 
 			}
 			.gradient-text{
 			font-size: clamp(40px, 5vw, 100px);
 			font-weight: 800;
-			letter-spacing: 2px;
 			text-align: left;
-			word-spacing: 5px;
-			text-wrap: balance;
+		
 			
 
 			background: var(--primary-gradient);
@@ -84,10 +79,6 @@ import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
 			}
 	
 			.subtitle{
-			
-				font-weight: 300;
-				line-height: 160%;
-				margin-top: 50px;
 				font-weight: 700;
 			}
 		
