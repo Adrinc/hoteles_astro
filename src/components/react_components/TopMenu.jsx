@@ -125,7 +125,7 @@ const TopMenu = () => {
                     ))}
                  
                     <div className="flex flex-row justify-center  items-center align-middle  w-[100%] ">
-                      <a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-primaryColor  hover:bg-tertiaryColor focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://uwifi-web.vercel.app/login">Login</a>
+                      <a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-green-50 buttom-text-shadow drop-shadow-sm bg-primaryColor  hover:bg-tertiaryColor focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 rounded-md" href="https://hotels-web-one.vercel.app/login">Login</a>
                       </div>
              
                     </nav>
@@ -166,7 +166,7 @@ const TopMenu = () => {
                 </nav>
 
                 <div className="hidden md:block ">
-                    <div className="flex items-center justify-end"><a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-secondaryButtomTextColor border-solid border-2 border-tertiaryColor buttom-text-shadow drop-shadow-xl bg-secondaryColor transition-all rounded-[25px] hover:bg-tertiaryColor hover:rounded-[50px] hover:text-tertiaryTextColor" href="https://uwifi-web.vercel.app/login">Login</a></div>
+                    <div className="flex items-center justify-end"><a className="inline-block buttom-shadow py-2 px-4 text-xl font-bold leading-5 text-secondaryButtomTextColor border-solid border-2 border-tertiaryColor buttom-text-shadow drop-shadow-xl bg-secondaryColor transition-all rounded-[25px] hover:bg-tertiaryColor hover:rounded-[50px] hover:text-tertiaryTextColor" href="https://hotels-web-one.vercel.app/login">Login</a></div>
                 </div>
             </div>
         </>
