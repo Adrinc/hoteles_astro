@@ -15,7 +15,7 @@ interface Props {
 	gradientColorRight?: string;
 }
 
-const { texto, link, backgroundColor="transparent", iconColor='secondaryColor', iconColorHover='primaryColor', borderColor = 'primaryColor', borderColorHover ='transparent',  borderWidth=3, textColor='tertiaryTextColor', textColorHover='#ffffff', gradientColorLeft='#1B69DF',gradientColorCenter='#093373', gradientColorRight='#08306D'   } = Astro.props;
+const { texto, link, backgroundColor="transparent", iconColor='secondaryColor', iconColorHover='Color', borderColor = 'primaryColor', borderColorHover ='transparent',  borderWidth=3, textColor='tertiaryTextColor', textColorHover='#ffffff', gradientColorLeft='#1B69DF',gradientColorCenter='#093373', gradientColorRight='#08306D'   } = Astro.props;
 ---
 <a href={link}>
     <button class=`button-learn flex flex-row-reverse align-middle items-center text-${textColor}`
