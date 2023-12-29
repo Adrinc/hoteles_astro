@@ -28,7 +28,10 @@ import BannerMarcas from "../components/BannerMarcas.astro";
 					and meet the high expectations of connected guests
 					digitally.
 				</p>
-				<BotonFlecha texto="Request demo" link="https://cb-luna.github.io/uwifi_map_services_acp_build/" backgroundColor="#24A342" textColor="#ffff" borderColor="#24A342" iconColor="#ffff" />
+				<div class="boton">
+
+					<BotonFlecha texto="Request demo" link="https://cb-luna.github.io/uwifi_map_services_acp_build/" backgroundColor="#24A342" textColor="#ffff" borderColor="#24A342" iconColor="#ffff" />
+				</div>
 
 		</div>
 	
@@ -46,7 +49,6 @@ import BannerMarcas from "../components/BannerMarcas.astro";
 		section{
 			display: flex;
 			flex-direction: column;
-			block-size: auto;
 			background: var(--quaternary-gradient);
 		}
 
@@ -55,8 +57,9 @@ import BannerMarcas from "../components/BannerMarcas.astro";
 			flex-direction: row;
 			justify-content: space-between;
             align-items: center;
-            gap: 4rem;
+            gap: 2rem;
 			padding: clamp(20px, 50vw, 100px);
+	
 	}
 
     .columna-izquierda{
@@ -66,16 +69,20 @@ import BannerMarcas from "../components/BannerMarcas.astro";
 			justify-content: center;
 			align-items: center;
             gap: 2rem;
-			width: 35%;
-	
+			max-height: 600px;
+			width: 40%;
+		
+			
 		}
 		.columna-derecha{
 			display: flex;
 			flex-direction: column;
+			flex-grow: 1;
 			justify-content: space-between;
 			gap: 2rem;
-            width: 65%;
+		
 			height: 100%;
+			width: 60%;
 			
 		}
 	
@@ -116,10 +123,7 @@ import BannerMarcas from "../components/BannerMarcas.astro";
 			  display: block;
 			  font-family: var(--font-family-secondary);
 			}
-			img{
-				width: clamp(280px, 50vw, 600px);
-				height: clamp(280px, 50vw, 600px);
-			}
+		
 
 		
 	
@@ -129,7 +133,8 @@ import BannerMarcas from "../components/BannerMarcas.astro";
 				flex-direction: column;
 				align-items: center;
 				align-content: center;
-				gap: 4rem;
+				justify-content: center;
+				gap: 2rem;
 				}
 				section{
 				padding-left: clamp(20px, 5vw, 50px);
@@ -137,19 +142,24 @@ import BannerMarcas from "../components/BannerMarcas.astro";
 				
 				}
                 .columna-izquierda{
-                    width: 100%;
-                    height: 70vh;
+                    width: 100vw;
+                    height: 50vh;
+					padding: 20px;
                 }
                 .columna-derecha{
-                    width: 100%;
+                    width: 100vw;
+					padding: 20px;
                 }
                 .acp-video{
                     width: 100%;
                     height: 50vh;
                 }
-				.title, .best, .subtitle{
+				.title, .best, .subtitle, .description{
 				text-align: center;
 			
+				}
+				.boton{
+					align-self: center;
 				}
 			
 			}

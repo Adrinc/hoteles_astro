@@ -14,6 +14,7 @@
         justify-content: center;
         width: 100%;
         padding: 16px;
+    
     }
     .banner{
         width: 80%;
@@ -21,7 +22,24 @@
     }
 
     .banner img{
-        width: 100%;
+        width: 80vw;
         height: 100%;
+        scale: clamp(0.5, 1, 1.5)
+    }
+    @media (max-width: 900px) {
+        main {
+            flex-direction: column;
+            padding: 8px;
+            margin-top: 30px;
+        }
+        .banner{
+            width: 100%;
+            height: 30px;
+        }
+        .banner img{
+            width: 100%;
+            height: 100%;
+            scale: 1.1;
+        }
     }
 </style>
