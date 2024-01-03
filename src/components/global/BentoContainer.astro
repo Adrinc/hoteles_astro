@@ -1,5 +1,6 @@
 ---
 interface Props{
+    id:number;
     title:string;
     imgSrc?:string;
     imgAlt?:string;
@@ -9,7 +10,7 @@ interface Props{
    
 
 }
-const {  title, imgSrc, imgAlt, reverse=false, rowSpan=1, colSpan=1 }= Astro.props;
+const {id,  title, imgSrc, imgAlt, reverse=false, rowSpan=1, colSpan=1 }= Astro.props;
 let flexDirection="column";
 let showImg= "block";
 
@@ -22,7 +23,7 @@ if (reverse){
 }
 ---
 
-<article style=
+<article id=`${id}` style=
 {`
 --flex-direction:${flexDirection};
 --grid-row: ${rowSpan};
