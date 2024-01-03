@@ -1,17 +1,39 @@
 ---
+import BentoContainer from "../../global/BentoContainer.astro";
 
-import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
+
 
 ---
 <section id="#bentogrid" class="mx-auto p-20">
 
-    <article>1</article>
-    <article>2</article>
-    <article>3</article>
-    <article>4</article>
-    <article>5</article>
-    <article>6</article>
-    <article>7</article>
+    <BentoContainer title="1" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+    <BentoContainer title="2" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+    <BentoContainer title="3" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={5}/>
+    <BentoContainer title="4" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={2}/>
+
+
+    <BentoContainer title="5" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+    <BentoContainer title="6" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+    <BentoContainer title="" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={3} colSpan={5}/>
+    <BentoContainer title="8" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+    <BentoContainer title="9" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+
+
+    <BentoContainer title="10" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={2}/>
+     <BentoContainer title="11" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+     <BentoContainer title="12" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+     
+     <BentoContainer title="13" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+     <BentoContainer title="14" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+     <BentoContainer title="15" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={2}/>
+     <BentoContainer title="16" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={2}/>
+
+     <BentoContainer title="17" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+     <BentoContainer title="18" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={3}/>
+     <BentoContainer title="19" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+     
+     <BentoContainer title="20" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
+     <BentoContainer title="21" imgSrc={`https://picsum.photos/id/${Math.floor(Math.random() * 100) + 1}/300/300`} rowSpan={1} colSpan={1}/>
 	
 </section>
 		  
@@ -20,9 +42,9 @@ import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
 		section{
 		
 			display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-auto-rows: 300px;
-            grid-gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-auto-rows: 150px;
+            grid-gap: 20px;
             justify-content: center;
             align-items: center;
             justify-items: center;
@@ -58,7 +80,7 @@ import BuyOrApplyFree from '../../global/BuyOrApplyFree.astro';
             transition: all 0.3s ease 0s;
         }
         article:hover{
-            transform: scale(1.1);
+            transform: scale(1.05);
            
         }
         /* make first article be 2 rows tall */
